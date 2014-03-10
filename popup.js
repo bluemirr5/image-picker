@@ -105,11 +105,7 @@ function ImageFinderCTRL($scope) {
 		}
 		
 	};
-
-	$scope.download = function(index) {
-		// var purl = 'data:Application/octet-stream,' + encodeURIComponent($scope.imageArray[index].data);
-		// var purl = 'data:'+$scope.imageArray[index].contentType+';base64,' + $scope.imageArray[index].data;
-		var purl = $scope.imageArray[index].location;
-		chrome.tabs.create( { url: purl} );
-	};
+	/*
+	javascript:function r(d){d.oncontextmenu=null;d.onselectstart=null;d.ondragstart=null;d.onkeydown=null;d.onmousedown=null;  d.body.oncontextmenu=null;d.body.onselectstart=null;d.body.ondragstart=null;d.body.onkeydown=null; d.body.onmousedown=null;}var  tb=document.all.tags('BODY');if(tb.length==0) {for(var i=0;i<top.frames.length;i++){r(top.frames[i].document);}}else{r(document);}
+	*/
 }

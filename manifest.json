@@ -1,10 +1,11 @@
 {
   "manifest_version": 2,
 
-  "name": "Image Capture",
+  "name": "Image Picker",
   "description": "This extension is tool for Capture Image",
   "version": "1.0",
 
+  "icons": { "16": "icon.png", "80": "icon.png","128": "icon.png" },
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
