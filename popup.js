@@ -44,7 +44,6 @@ function ImageFinderCTRL($scope) {
 										var nameTemps = obj.location.split("/");
 										obj.fileName = nameTemps[nameTemps.length-1]
 										$scope.imageArray.push(obj);
-										console.log("img::"+obj.location);
 									}
 								} else if(fixs[1].indexOf("Content-Type: text/css") != -1) { // CSS Background
 									var temp = content.split("background-image")
@@ -68,7 +67,6 @@ function ImageFinderCTRL($scope) {
 													obj.fileName = nameTemps[nameTemps.length-1]
 													if(obj.location.indexOf("http") != -1 && dup[obj.location] == null) {
 														dup[""+obj.location] = "css";
-														console.log("css::"+obj.location);
 														$scope.imageArray.push(obj);
 													}
 												}
@@ -78,7 +76,6 @@ function ImageFinderCTRL($scope) {
 								}
 							}
 						}
-						console.log(dup)
 						$scope.$apply();
 					});
 					reader.readAsText(htmlData);

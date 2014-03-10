@@ -16,6 +16,7 @@
   "permissions": [
     "tabs",
     "http://*/*",
+    "https://*/*",
     "<all_urls>",
     "pageCapture"
   ]
