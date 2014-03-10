@@ -15,17 +15,33 @@
           max-width:300px;
       }
       #container { position: 'relative' }
-      #imgArea {
+      /*#imgArea {
         border:1px solid gray;
         border-bottom: 0px solid gray;
+      */}
+      .masonry {
+        background: #EEE;
+        max-width: 640px;
+      }
+
+      .masonry .item {
+        min-width:  50px;
+        min-height: 50px;
+        float: left;
+        /*background: #D26;*/
+        border: 1px solid #333;
+        border-color: hsla(0, 0%, 0%, 0.5);
+        border-radius: 5px;
+        margin: 5px 5px 0 0;
+        padding: 1px;
       }
     </style>
   </head>
   <body ng-controller="ImageFinderCTRL">
     <h2>Image Download</h2>
-    <div id="container">
-      <a ng-href="{{imageInfo.location}}" download="{{imageInfo.fileName}}" ng-repeat="imageInfo in imageArray track by $index" class="js-masonry" data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
-        <div id="imgArea" >
+    <div id="container" class="masonry js-masonry"  data-masonry-options='{ "columnWidth": 60 }'>
+      <a ng-href="{{imageInfo.location}}" download="{{imageInfo.fileName}}" ng-repeat="imageInfo in imageArray track by $index" class="item">
+        <div id="imgArea">
             <img ng-src="{{imageInfo.location}}">
         </div>
       </a>
