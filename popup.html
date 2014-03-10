@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script type="text/javascript" src="./jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="./angular.min.js"></script>
+    <script type="text/javascript" src="./masonry.js"></script>
+    <script type="text/javascript" src="./popup.js"></script>
+    <style>
+      body {
+        min-width:453px;
+        min-height:523px;
+        overflow-x:hidden;
+      }
+      img{
+          max-width:300px;
+      }
+      #container { position: 'relative' }
+      #imgArea {
+        border:1px solid gray;
+        border-bottom: 0px solid gray;
+      }
+    </style>
+  </head>
+  <body ng-controller="ImageFinderCTRL">
+    <h2>Image Download</h2>
+    <div id="container">
+      <a ng-href="{{imageInfo.location}}" download="{{imageInfo.fileName}}" ng-repeat="imageInfo in imageArray track by $index" class="js-masonry" data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
+        <div id="imgArea" >
+            <img ng-src="{{imageInfo.location}}">
+        </div>
+      </a>
+      <hr/>
+    </div>
+  </body>
+</html>
