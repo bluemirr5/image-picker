@@ -3,7 +3,7 @@
 
   "name": "Image Picker",
   "description": "This extension is tool for Capture Image",
-  "version": "1.0",
+  "version": "1.5",
 
   "icons": { "16": "icon.png", "80": "icon.png","128": "icon.png" },
   "browser_action": {
